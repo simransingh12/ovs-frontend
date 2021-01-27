@@ -1,132 +1,142 @@
-.bg-box{
-    position: absolute;
-    width: 706px;
-    height: 650px;
-    left: calc(50% - 706px/2);
-    top: calc(50% - 704px/2 + 130px);
-    background: rgba(97, 81, 81, 0.71);
+.feedbackbg-box{
+  position: absolute;
+  width: 706px;
+  height: 650px;
+  left: calc(50% - 706px/2);
+  top: calc(50% - 704px/2 + 130px);
+  background: rgba(97, 81, 81, 0.71);
 }
 
-.text{
-    position: absolute;
-    left: 75px;
-    top: 20px;
-    font-family: 'Brush Script MT', cursive;
-    font-size: 40px;
-    color: #FBF4F4;
+.feedbacktext{
+  position: absolute;
+  left: 75px;
+  top: 20px;
+  width: auto;
+  font-family: 'Brush Script MT', cursive;
+  font-size: 40px;
+  color: #FBF4F4;
 }
 
 input[type="radio"]{
-  display: none;
+display: none;
 }
 
 .star{
-  cursor: pointer;
-  transition: color 200ms;
+cursor: pointer;
+transition: color 200ms;
 }
 
-  .message{
-    position: absolute;
-    width: 521px;
-    height: 154px;
-    left: 20px;
-    top: 200px;
-    font-size: 30px;
-    font-family: Corben;
-    background: #C4C4C4;
-    border-radius: 30px;
-  }
+.message{
+  position: absolute;
+  width: 521px;
+  height: 154px;
+  left: 20px;
+  top: 200px;
+  font-size: 30px;
+  font-family: Corben;
+  background: #C4C4C4;
+  border-radius: 30px;
+}
 
-  textarea::placeholder{
-      text-align: center;
-  }
+textarea::placeholder{
+    text-align: center;
+}
 
-  .submit{
-    position: absolute;
-    width: 206px;
-    height: 74px;
-    left: 170px;
-    top: 450px;
-    background: #219653;
-    border-radius: 30px;
-    font-size: 36px;
-    color: white;
-    font-family: Corben;
-  }
+.feedbacksubmit{
+  position: absolute;
+  width: 206px;
+  height: 74px;
+  background: #219653;
+  border-radius: 30px;
+  font-size: 36px;
+  color: white;
+  font-family: Corben;
+}
 
-  .logout{
-      position: absolute;
-      right: 50px;
-      top: 150px;
-      color: white;
-  }
-  .mypro{
+.feedbacklogout{
     position: absolute;
-    right: 200px;
+    right: 50px;
     top: 150px;
     color: white;
 }
-  
-  
-  .viewbg-box{
-    position: absolute;
-    width: 700px;
-    height: 630px;
-    left: 50px;
-    top: 300px;
-    background: rgba(97, 81, 81, 0.71);
-  }
-  .feedhead{
-    position: absolute;
-    width: 209px;
-    height: 67px;
-    left: 850px;
-    top: 200px;
-    font-family: Corben;
-    background-color:rgba(97, 81, 81, 0.71); ;
-    font-size: 36px;
-    line-height: 67px;
-    text-align: center;
-    letter-spacing: 0.12em;
-    color:white;
-  }
+.feedbackmypro{
+  position: absolute;
+  right: 200px;
+  top: 150px;
+  color: white;
+}
 
-  .date{
-    position: absolute;
-    width: 323px;
-    height: 67px;
-    font-size: 30px;
-    background: #CDC8C8;
-    border-radius: 30px;
-  }
-  .date::placeholder{
-    text-align: center;
-  }
+.feedbackhome{
+  position: absolute;
+  right: 400px;
+  top: 150px;
+  color: white;
+}
 
-  .search{
-    position: absolute;
-    width: 206px;
-    height: 74px;
-    background: #219653;
-    border-radius: 30px;
-    font-size: 30px;
-  }
+.feedbackviewbg-box{
+  position: absolute;
+  width: 700px;
+  height: 630px;
+  left: 50px;
+  top: 300px;
+  background: rgba(97, 81, 81, 0.71);
+}
+.feedhead{
+  position: absolute;
+  width: 209px;
+  height: 67px;
+  left: 850px;
+  top: 220px;
+  font-family: Corben;
+  background-color:rgba(97, 81, 81, 0.71); ;
+  font-size: 36px;
+  line-height: 67px;
+  text-align: center;
+  letter-spacing: 0.12em;
+  color:white;
+}
 
-  .feedlist{
-    width: 1345px;
-    height: 147px;
-    background: rgba(97, 81, 81, 0.71);
-    font-size: 28px;
-  }
-  .adminfeedlist{
-    width: 1110px;
-    height: 147px;
-    background: rgba(97, 81, 81, 0.71);;
-    font-size: 28px;
-  }
-  .table{
-    border-spacing:0px 20px;
-  }
+.feedbackdate{
+  width: 323px;
+  height: 67px;
+  font-size: 30px;
+  background: #CDC8C8;
+  border-radius: 30px;
+}
+.feedbackdate::placeholder{
+  text-align: center;
+}
+
+.feedbacksearch{
+  position: absolute;
+  width: 206px;
+  height: 74px;
+  background: #219653;
+  border-radius: 30px;
+  font-size: 30px;
+}
+
+.feedlist{
+  font-size: 28px;
+}
+.adminfeedbacklist{
+  font-size: 28px;
+}
+.feedbacktable{
+  background: rgba(97, 70, 81, 0.71);
+  height: 570px;
+  max-width: 1060px;
+  width: 1060px;
+  overflow: auto;
+}
+
+.custfeedbacktable{
+  margin: 10px;
+  background:rgba(97, 70, 81, 0.71);
+  height: 570px;
+  width: 1200px;
+  overflow: auto;
+}
 
 
 

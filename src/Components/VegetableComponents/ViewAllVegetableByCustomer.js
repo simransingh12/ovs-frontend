@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import CartService from '../../services/CartService';
+import { Link } from 'react-router-dom';
 import VegetableService from '../../services/VegetableService';
 import ViewVegetable from '../VegetableComponents/ViewVegetable';
 import '../../../src/css/ViewVegetable.css'
@@ -34,6 +35,7 @@ class ViewAllVegetableByCustomer extends Component {
                 <div>
                     <ViewVegetable/>
                 </div>
+                <Link to="/customerViewFeedback"class="feedbackmypro">Feedback</Link> 
                 <h2 className="heading">All Vegetable List</h2>
                 
                 <div className="rightBox" >

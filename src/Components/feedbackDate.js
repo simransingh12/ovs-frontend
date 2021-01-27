@@ -56,16 +56,17 @@ class feedbackDate extends Component {
     render() {
         return (
             <div>
-                <Link  class="mypro">My Profile</Link> 
-                <Link  class="logout">Logout</Link> 
-                <h1 class="feedhead" style={{position:'absolute',left: '900px',top: '200px'}}>Feedbacks</h1>
-                <div class="viewbg-box">
+                <Link to="/adminMenu" class="feedbackmypro">HOME</Link> 
+                <Link  to="/Login" class="feedbacklogout">LOGOUT</Link> 
+            <link rel="stylesheet" href="node_modules/react-star-rating/dist/css/react-star-rating.min.css"></link>
+            <h1 class="feedhead" style={{position:'absolute',left: '900px',top: '220px'}}>Feedbacks</h1>
+                <div class="feedbackviewbg-box" style={{top:'270px'}}>
                     
                     <div style={{position:'absolute',left: '250px',top: '125px'}}>
                         View By Date
                     </div>
-                    <input type="text" class="date" id="date" name="date" placeholder="Date(yyyy-mm-dd)" onChange={this.changeDate} style={{position:'absolute',left: '160px',top: '180px'}}></input>
-                    <button class="search" style={{left:'230px',top:'270px'}} onClick = {()=>this.searchByDate()} >Search</button>
+                    <input type="text" class="feedbackdate" id="date" name="date" placeholder="Date(yyyy-mm-dd)" onChange={this.changeDate} style={{position:'absolute',left: '170px',top: '180px'}}></input>
+                    <button class="feedbacksearch" style={{left:'230px',top:'270px'}} onClick = {()=>this.searchByDate()} >Search</button>
 
                     <div style={{position:'absolute',left: '250px',top: '400px'}}>
                         View By Rating
@@ -88,22 +89,32 @@ class feedbackDate extends Component {
                                 })}
                             
                             </div>
-                    <button class="search" onClick={()=> this.searchByRating()} style={{left:'230px',top:'525px'}}>Search</button>
+                    <button class="feedbacksearch" onClick={()=>this.searchByRating()} style={{left:'230px',top:'525px'}} >Search</button>
 
                 </div>
                 <table>
-                           <tbody class="table" style={{position:'absolute', top:'300px', left:'780px'}}>
+                           <tbody class="feedbacktable" style={{position:'absolute', top:'300px', left:'780px'}}>
                                {
                                    this.state.feedbacks.length === 0?
-                                   <div class="adminfeedlist" style={{height:'600px', width:'1000px'}}>
+                                   <div class="adminfeedbacklist">
                                        <h3> No Records Found</h3>
                                    </div>:
                                this.state.feedbacks.map(feedback =>
-                                <tr key= {feedback.id} >
-                                <td class="adminfeedlist" >
+                                <tr key= {feedback.id}>
+                                <td class="adminfeedbacklist">
                                 &nbsp;&nbsp;&nbsp;{feedback.feedDate}<br/>
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{feedback.custId}<br/>
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{feedback.message}
+                                    {(feedback.rating === "0") &&
+                                    (
+                                        <div>
+                                            <FaStar size={50} className="star1" id="star1" style={{position:'absolute', left:'500px'}}/>
+                                            <FaStar size={50} class="star2" id="star2" style={{position:'absolute', left:'560px'}}/>
+                                            <FaStar size={50} class="star3" id="star3" style={{position:'absolute', left:'620px'}}/>
+                                            <FaStar size={50} class="star4" id="star4" style={{position:'absolute', left:'680px'}}/>
+                                            <FaStar size={50} class="star5" id="star5" style={{position:'absolute', left:'740px'}}/>
+                                        </div>)
+                                    }
                                     {(feedback.rating === "1") &&
                                     (
                                         <div>
@@ -155,24 +166,24 @@ class feedbackDate extends Component {
                                         </div>)
                                     } 
                                     
-                                         <FaThumbsUp size={50} style={{position:'absolute', left:'950px'}}/>
-                                         <FaThumbsDown size={50} style={{position:'absolute', left:'1050px'}}/><br/><br/>
-                                         <div style={{position: 'absolute', left: '960px'}}>{feedback.like}</div>
+                                         <FaThumbsUp size={50} style={{position:'absolute', left:'850px'}}/>
+                                         <FaThumbsDown size={50} style={{position:'absolute', left:'950px'}}/><br/><br/>
+                                         <div style={{position: 'absolute', left: '860px'}}>{feedback.like}</div>
                                          
                                          
-                                         <div style={{position: 'absolute', left: '1060px'}}>{feedback.dislike}</div> 
+                                         <div style={{position: 'absolute', left: '960px'}}>{feedback.dislike}</div> 
                                                                         
 
 
                                     <br/><br/>
                                 </td>
-                                <td>
-                                </td>
+                                <td></td>
+                                <td></td>
                                 </tr>
                                 )}
                                
                             </tbody>
-                       </table>  
+                       </table>
             </div>
         )
     }

@@ -9,20 +9,14 @@ class GiveFeedbackComponenet extends Component {
     constructor(props) {
         super(props);
         this.state = {
-                email: UserProfile.getName(),
                 rating: 0,
                 message:'',
                 hover:0,
                 isValid:true
         }
         this.changeFeedbackMessage= this.changeFeedbackMessage.bind(this);
-        this.linkhome=this.linkhome.bind(this)
-        this.linkmypro=this.linkmypro.bind(this)
         
         
-    }  
-    componentDidMount(){
-        console.log(this.props.location.state)
     } 
     cancel = () =>{
         this.props.history.push('/vegetable');
@@ -52,32 +46,16 @@ class GiveFeedbackComponenet extends Component {
         this.setState({message: event.target.value});
     }
 
-    linkmypro = () =>{
-        this.props.history.push(
-            {
-                pathname: '/myProfile',
-                search: '?query=abc',
-                state: {email:this.state.email }
-              })
-    }
-
-    linkhome = () =>{
-        this.props.history.push(
-            {
-                pathname: '/vegetable',
-                search: '?query=abc',
-                state: {email:this.state.email }
-              })
-    }
+    
 
     render() {
         return (
             <div>
                 <link rel="stylesheet" href="node_modules/react-star-rating/dist/css/react-star-rating.min.css"></link>
                 <div>
-                <Link onClick={this.linkmypro} class="feedbackmypro">My Profile</Link> 
+                <Link to="myProfile" class="feedbackmypro">My Profile</Link> 
                 <Link to="/Login"  class="feedbacklogout">Logout</Link>
-                <Link onClick={this.linkhome} class="feedbackhome" >Home</Link>           
+                <Link to="/vegetable" class="feedbackhome" >Home</Link>           
                 <div className="feedbackbg-box">
                     <div className="feedbacktext">
                         Please take a moment to give a feedback..<br/><br/>
