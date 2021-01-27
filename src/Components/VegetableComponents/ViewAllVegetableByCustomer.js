@@ -34,7 +34,7 @@ class ViewAllVegetableByCustomer extends Component {
                 <div>
                     <ViewVegetable/>
                 </div>
-                <h2 className="heading">Vegetable List</h2>
+                <h2 className="heading">All Vegetable List</h2>
                 
                 <div className="rightBox" >
                     <table style={{width:"100px",overflowX:"scroll"}}>
@@ -50,7 +50,7 @@ class ViewAllVegetableByCustomer extends Component {
                                     <tr>{vegetable.vegName}</tr>
                                     <tr>Rs. {vegetable.vegPrice}</tr>
                                     <tr>{vegetable.vegType}</tr>
-                                    <tr> <button onClick = {()=>this.addToCart(vegetable.vegId)} >Add To Cart</button></tr>  
+                                    <tr> <button onClick = {()=>this.addToCart(vegetable.vegId)} style={{borderRadius:"30px"}}>Add To Cart</button></tr>  
                                      </tr> 
                                      </table>}
                                      </td> 

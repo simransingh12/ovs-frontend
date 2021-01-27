@@ -51,7 +51,7 @@ class ViewAllVegetable extends Component {
             <div >
             
             
-            <h2 >Vegetable List</h2>
+            <h2 className="heading">All Vegetable List</h2>
             <button  onClick={this.addVegetable} style={{width: "187px", height: "42px",borderRadius:"30px"}}>Add Vegetable</button> 
             
             <div >
@@ -68,9 +68,9 @@ class ViewAllVegetable extends Component {
                                 <tr>{vegetable.vegName}</tr>
                                 <tr>Rs. {vegetable.vegPrice}</tr>
                                 <tr>{vegetable.vegType}</tr>
-                                <tr > <button onClick = {()=>this.editVegetable(vegetable.vegId)}  style={{width: "87px", height: "42px",borderRadius:"30px",marginLeft: "10px"}} >Update</button></tr>
-                                <button  style = {{marginLeft: "10px"}} onClick = {()=>this.deleteVegetable(vegetable.vegId)} style={{width: "87px", height: "42px",borderRadius:"30px",marginLeft: "10px"} }>Delete</button>
-                                <tr><button  style = {{marginLeft: "10px"}} onClick = {()=>this.ViewVegetable(vegetable.vegId)} >View</button>
+                                <tr > <button onClick = {()=>this.editVegetable(vegetable.vegId)}  className="sbutton" >Update</button></tr>
+                                <button   onClick = {()=>this.deleteVegetable(vegetable.vegId)} className="sbutton">Delete</button>
+                                <tr><button   onClick = {()=>this.ViewVegetable(vegetable.vegId)} className="sbutton">View</button>
                                 </tr>  </tr> 
                                  </table>}
                                  </td> 

@@ -1,6 +1,6 @@
 import React, { Component, useState } from 'react'
 import { Link } from 'react-router-dom'
-import feedback from '../css/feedback.css'
+import f1 from '../css/feedback.css'
 import FeedbackService from '../services/FeedbckService'
 import {FaStar} from 'react-icons/fa'
 import UserProfile from './UserProfile'
@@ -9,17 +9,27 @@ class GiveFeedbackComponenet extends Component {
     constructor(props) {
         super(props);
         this.state = {
+                email: UserProfile.getName(),
                 rating: 0,
                 message:'',
                 hover:0,
                 isValid:true
         }
         this.changeFeedbackMessage= this.changeFeedbackMessage.bind(this);
+        this.linkhome=this.linkhome.bind(this)
+        this.linkmypro=this.linkmypro.bind(this)
         
         
-    }   
+    }  
+    componentDidMount(){
+        console.log(this.props.location.state)
+    } 
+    cancel = () =>{
+        this.props.history.push('/vegetable');
+    } 
 
     saveFeedback = (e)=>{
+        console.log(this.state.email)
         console.log(this.state.message.length)
         if(this.state.message.length === 0){
             alert('Enter message')
@@ -28,6 +38,7 @@ class GiveFeedbackComponenet extends Component {
             let feedback ={ message: this.state.message,
                 custId: UserProfile.getName(), 
                 rating: this.state.rating
+                
             };
             console.log(JSON.stringify(feedback));
             FeedbackService.createFeedback(feedback).then(res =>{
@@ -41,18 +52,34 @@ class GiveFeedbackComponenet extends Component {
         this.setState({message: event.target.value});
     }
 
-    
+    linkmypro = () =>{
+        this.props.history.push(
+            {
+                pathname: '/myProfile',
+                search: '?query=abc',
+                state: {email:this.state.email }
+              })
+    }
+
+    linkhome = () =>{
+        this.props.history.push(
+            {
+                pathname: '/vegetable',
+                search: '?query=abc',
+                state: {email:this.state.email }
+              })
+    }
 
     render() {
         return (
             <div>
                 <link rel="stylesheet" href="node_modules/react-star-rating/dist/css/react-star-rating.min.css"></link>
                 <div>
-                <Link to='/myProfile'class="mypro">My Profile</Link> 
-                <Link to="/login" class="logout">Logout</Link>  
-                <Link to="/vegetable" >Home</Link>           
-                <div className="bg-box">
-                    <div className="text">
+                <Link onClick={this.linkmypro} class="feedbackmypro">My Profile</Link> 
+                <Link to="/Login"  class="feedbacklogout">Logout</Link>
+                <Link onClick={this.linkhome} class="feedbackhome" >Home</Link>           
+                <div className="feedbackbg-box">
+                    <div className="feedbacktext">
                         Please take a moment to give a feedback..<br/><br/>
                         <div style={{position: 'absolute', left: '150px'}}>
                             {
@@ -74,7 +101,8 @@ class GiveFeedbackComponenet extends Component {
                             </div>
                         <textarea class="message" id="message" name="message" placeholder="Message"
                          value={this.state.message} onChange={this.changeFeedbackMessage}></textarea>
-                        <button name="Submit" class="submit" onClick={this.saveFeedback}> Submit</button>
+                        <button name="Submit" class="feedbacksubmit" onClick={this.saveFeedback}style={{left: '60px',top: '450px'}}> Submit</button>
+                        <button name="Submit" class="feedbacksubmit" onClick={this.cancel} style={{position:'absolute',left:'300px',top: '450px'}}> Cancel</button>
                     </div>
                 </div>
             </div>
