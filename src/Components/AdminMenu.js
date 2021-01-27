@@ -2,7 +2,8 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom';
 import OrderService from '../services/OrderService.js'
-
+import  { Button }  from 'react-bootstrap'
+import '../css/AdminMenu.css'
 
 class AdminMenu extends Component {
     constructor(props) {
@@ -18,7 +19,6 @@ class AdminMenu extends Component {
         this.viewAllFeedbacks = this.viewAllFeedbacks.bind(this)
         this.viewAllVegetables = this.viewAllVegetables.bind(this)
     }
-
 
     // componentDidMount(){
     //     OrderService.getAllOrders()
@@ -36,32 +36,34 @@ class AdminMenu extends Component {
     // }
 
     viewAllOrders(){
-    this.props.history.push('/orders')
-    }
-
-    viewAllPayments(){
-        this.props.history.push('/payments')
+        this.props.history.push('/orders')
         }
-
-    viewAllFeedbacks(){
-            this.props.history.push('/adminViewFeedback')
+    
+        viewAllPayments(){
+            this.props.history.push('/payments')
             }
-
-    viewAllVegetables(){
-                this.props.history.push('/viewVegetable')
+    
+        viewAllFeedbacks(){
+                this.props.history.push('/adminViewFeedback')
                 }
+    
+        viewAllVegetables(){
+                    this.props.history.push('/vegetables')
+                    }
+
 
 
 
     render() {
         return (
             <div>
-              <div className="row">
-                    <Link to="/login" className="heading" style={{position: 'absolute',fontSize: '24px',lineHeight: '44px',left: '1600px',top: '-40px'}}>LOGOUT</Link>
-                    <button className="ViewOrders" type="submit" onClick={this.viewAllOrders} color="rgba(43, 43, 41, 0.83)" style={{position:'absolute',left: '500px',top: '200px',width: '250px',  height: '60px' }}>View Orders</button>  
-                    <button className="ViewPayments" type="submit" onClick = {this.viewAllPayments} color="rgba(43, 43, 41, 0.83)" style={{position:'absolute',left: '500px',top: '300px',width: '250px',  height: '60px' }}>View Payments</button>
-                    <button className="ViewFeedbacks" type="submit" onClick = {this.viewAllFeedbacks} color="rgba(43, 43, 41, 0.83)" style={{position:'absolute',left: '500px',top: '400px',width: '250px',  height: '60px' }}>View Feedback</button>
-                    <button className="ViewVegetables" type="submit" onClick = {this.viewAllVegetables} color="rgba(43, 43, 41, 0.83)" style={{position:'absolute',left: '500px',top: '500px',width: '250px',  height: '60px' }}>View Vegetables</button>
+              <div className="adminviewbg">
+                  <label className="adminmenu">ADMIN MENU</label>
+                    <Link to="/login" className="heading" style={{position: 'absolute',fontSize: '24px',lineHeight: '44px',left: '1000px',top: '-70px'}}>LOGOUT</Link>
+                    <Button className="ViewOrders" type="submit" onClick={this.viewAllOrders} color="rgba(43, 43, 41, 100)" style={{position:'absolute',left: '120px',top: '350px',width: '250px',  height: '60px' }}>View Orders</Button>  
+                    <Button className="ViewPayments" type="submit" onClick = {this.viewAllPayments} color="rgba(43, 43, 41, 0.83)" style={{position:'absolute',left: '120px',top: '170px',width: '250px',  height: '60px' }}>View Payments</Button>
+                    <Button className="ViewFeedbacks" type="submit" onClick = {this.viewAllFeedbacks} color="rgba(43, 43, 41, 0.83)" style={{position:'absolute',left: '120px',top: '260px',width: '250px',  height: '60px' }}>View Feedback</Button>
+                    <Button className="ViewVegetables" type="submit" onClick = {this.viewAllVegetables} color="rgba(43, 43, 41, 0.83)" style={{position:'absolute',left: '120px',top: '80px',width: '250px',  height: '60px' }}>View Vegetables</Button>
 
                 </div>
             </div>
