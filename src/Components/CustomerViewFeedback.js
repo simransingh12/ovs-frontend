@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import FeedbckService from '../services/FeedbckService';
-import {FaStar,FaThumbsDown,FaThumbsUp} from 'react-icons/fa'
+import {FaStar,FaThumbsDown,FaThumbsUp, FaWindows} from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 import UserProfile from './UserProfile';
 
@@ -9,6 +9,7 @@ class CustomerViewFeedback extends Component {
         super(props)
 
         this.state = {
+            email: UserProfile.getName(),
             feedbacks: [],
             rating: 0,
             feedByFeedId:[],
@@ -18,28 +19,27 @@ class CustomerViewFeedback extends Component {
     }
 
     componentDidMount(){
+        console.log(this.state.email)
         FeedbckService.getFeedbacks()
         .then((res) => {
             this.setState({feedbacks: res.data});
         })
-        FeedbckService.getFeedbackRelByCustId(UserProfile.getName())
+        FeedbckService.getFeedbackRelByCustId(this.state.email)
         .then((res) => {
             this.setState({feedByCustId: res.data});
         })
     }
     toggle=(fedId,e)=>{
+        console.log(this.state.email)
         if(e.target.classList.value === "fa fa-thumbs-up"){
             e.target.style.color="red"
-            FeedbckService.addLike(fedId,UserProfile.getName())
+            FeedbckService.addLike(fedId,this.state.email)
         }
         else{
             e.target.style.color="blue"
-            FeedbckService.addDislike(fedId,UserProfile.getName())
+            FeedbckService.addDislike(fedId,this.state.email)
         }
         e.target.classList.toggle("fa-thumbs-down")
-        
-        window.location.reload(); 
-        
     }
    
 
@@ -136,10 +136,7 @@ class CustomerViewFeedback extends Component {
                                             !f.likes && !f.dislikes?<i  id="btntog" class="fa fa-thumbs-up" onClick={(e)=>this.toggle(feedback.fedId,e)} style={{position:'absolute',left:'900px', fontSize:'50px', color: 'blue'}}></i>
                                             :f.likes?<i  id="btntog" class="fa fa-thumbs-down" onClick={(e)=>this.toggle(feedback.fedId,e)} style={{position:'absolute',left:'900px', fontSize:'50px', color: 'red'}}></i>
                                             :<i  id="btntog" class="fa fa-thumbs-up" onClick={(e)=>this.toggle(feedback.fedId,e)} style={{position:'absolute',left:'900px', fontSize:'50px', color: 'blue'}}></i>
-                                        )}
-                                    
-                                    <div style={{position: 'absolute', left: '960px'}}>likes:{feedback.like}</div>
-                                    <div style={{position: 'absolute', left: '1060px'}}>dislikes:{feedback.dislike}</div>                                   
+                                        )}                                 
 
 
                                     <br/><br/>
