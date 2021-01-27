@@ -26,7 +26,7 @@ class Between21to50 extends Component {
                 <ViewVegetable/>
             </div>
             
-            <h2 >Vegetable List Greater than 20</h2>
+            <h2 className="heading">Vegetable List between 21 to 50</h2>
             
             <div className="rightBox">
                 <table >

@@ -34,7 +34,7 @@ class ViewAllVegetableByCustomer extends Component {
                 <div>
                     <ViewVegetable/>
                 </div>
-                <h2 className="heading">Vegetable List</h2>
+                <h2 className="heading">All Vegetable List</h2>
                 
                 <div className="rightBox" >
                     <table style={{width:"100px",overflowX:"scroll"}}>

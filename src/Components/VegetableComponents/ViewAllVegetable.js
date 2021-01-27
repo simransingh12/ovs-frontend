@@ -51,7 +51,7 @@ class ViewAllVegetable extends Component {
             <div >
             
             
-            <h2 >Vegetable List</h2>
+            <h2 className="heading">All Vegetable List</h2>
             <button  onClick={this.addVegetable} style={{width: "187px", height: "42px",borderRadius:"30px"}}>Add Vegetable</button> 
             
             <div >

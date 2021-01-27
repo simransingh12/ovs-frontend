@@ -26,7 +26,7 @@ class ByTypeRoot extends Component {
                 <ViewVegetable/>
             </div>
             
-            <h2 >Vegetable List of type Root</h2>
+            <h2 className="heading">Vegetable List of type Root</h2>
             
             <div className="rightBox">
                 <table >

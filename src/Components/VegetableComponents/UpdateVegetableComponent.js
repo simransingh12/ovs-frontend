@@ -68,7 +68,7 @@ class UpdateVegetableComponent extends Component {
                         </td>
                     <td>
                         <div className="VbgBox">
-                            <h3 className="vheading">Edit Vegetable</h3>
+                            <h3 className="vheading">Update Vegetable</h3>
                             <div >
                                 <form>
                                     <div > 

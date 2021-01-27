@@ -26,7 +26,7 @@ import VegetableService from '../../services/VegetableService';
                 <ViewVegetable/>
             </div>
             
-            <h2 >Vegetable List Greater than 20</h2>
+            <h2 className="heading">Vegetable List between 51 to 100</h2>
             
             <div className="rightBox">
                 <table >
