@@ -50,7 +50,7 @@ class ViewAllVegetableByCustomer extends Component {
                                     <tr>{vegetable.vegName}</tr>
                                     <tr>Rs. {vegetable.vegPrice}</tr>
                                     <tr>{vegetable.vegType}</tr>
-                                    <tr> <button onClick = {()=>this.addToCart(vegetable.vegId)} >Add To Cart</button></tr>  
+                                    <tr> <button onClick = {()=>this.addToCart(vegetable.vegId)} style={{borderRadius:"30px"}}>Add To Cart</button></tr>  
                                      </tr> 
                                      </table>}
                                      </td> 

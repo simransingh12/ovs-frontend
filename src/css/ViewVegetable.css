@@ -125,4 +125,9 @@
     text-align: center;
     }
       
-
+ .sbutton{
+  width: 97px;
+   height: 42px;
+   border-radius:30px;
+   margin-left: 10px;
+ }
