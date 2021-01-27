@@ -1,0 +1,58 @@
+.ViewOrders{  
+position: absolute;
+width: 231px;
+height: 56px;
+left: 592px;
+top: 363px;
+font-family: Corben;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 56px;
+/* identical to box height */
+color: #FCF8F8;
+
+}
+
+.row{
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    left: 200px;
+    top: 190px;
+    color:aliceblue;
+    background: rgba(97, 81, 81, 0.71);
+
+    }
+
+
+.ViewPayments{  
+position: absolute;
+width: 231px;
+height: 56px;
+left: 592px;
+top: 363px;
+font-family: Corben;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 56px;
+/* identical to box height */
+color: #FCF8F8;
+}
+
+.ViewFeedback{  
+position: absolute;
+width: 231px;
+height: 56px;
+left: 592px;
+top: 363px;
+font-family: Corben;
+font-style: normal;
+font-weight: normal;
+font-size: 30px;
+line-height: 56px;
+/* identical to box height */
+color: #FCF8F8;
+
+}

@@ -1,0 +1,61 @@
+.Button{
+    position: absolute;
+  width: 206px;
+  height: 74px;
+  /* left: 627px;
+  top: 695px; */
+  
+  /* Green 1 */
+  
+  background: #219653;
+  border-radius: 30px;
+  font-family: Corben;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 67px;
+  /* identical to box height */
+  
+  text-align: center;
+  
+  color: #FFFFFF;
+  }
+  .bgBox{
+  position: absolute;
+  width: 589px;
+  height: 618px;
+  left: 650px;
+  top: 269px;
+  
+  background: rgba(97, 81, 81, 0.71);
+  }
+  .txtbox{
+  position: absolute;
+  width: 323px;
+  height: 67px;
+  background: #CDC8C8;
+  border-radius: 30px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 36px;
+  line-height: 67px;
+  color: #000000;
+  text-align: center;
+  }
+  .heading{
+  font-family:'Times New Roman', Times, serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 67px;
+  letter-spacing: 0.12em;
+  color: #FCF7F7;
+  }
+  .profileBox{
+    position: absolute;
+    width: 503px;
+    height: 740px;
+    left: -2px;
+    top: 205px;
+    
+    background: rgba(35, 34, 34, 0.95);
+  }

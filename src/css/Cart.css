@@ -1,0 +1,81 @@
+.CartItem {
+  position: absolute;
+  width: 345px;
+  height: 380px;
+  border-spacing: 100px;
+  background: rgba(230, 228, 228, 0.77);
+}
+.VegImage {
+  position: absolute;
+  width: 280px;
+  height: 210px;
+  background-size: 280px;
+  /* margin-left: 32px;
+    margin-top: 32px;
+    margin-right: 32px; */
+  /* background-image: url(../Images/lettuce.png); */
+}
+.vegPrice {
+  position: absolute;
+  margin-left: 32px;
+  margin-top: 250px;
+  margin-right: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 22px;
+  color: #0e0d0d;
+}
+.vegName {
+  position: absolute;
+  margin-left: 32px;
+  margin-top: 270px;
+  margin-right: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 44px;
+
+  color: #080808;
+}
+.Delete {
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+
+  font-weight: bold;
+  margin-left: 275px;
+  margin-top: 10.98px;
+}
+
+.Buy {
+  position: absolute;
+  width: 255px;
+  height: 50px;
+  font-family: Corben;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 27px;
+  border: 0px;
+  border-radius: 30px;
+  background: #219653;
+  color: #ffffff;
+}
+tbody {
+  width: 345px;
+  height: 380px;
+  margin-left: 50px;
+
+  background: rgba(230, 228, 228, 0.77);
+}
+.row {
+  position: absolute;
+  width: 687px;
+  height: 500px;
+  left: 133px;
+  top: 202px;
+}
+.divButton {
+  left: 599px;
+  margin-top: 200px;
+}

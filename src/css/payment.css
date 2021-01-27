@@ -1,0 +1,51 @@
+
+    .date{
+      position: absolute;
+      width: 250px;
+      height: 60px;
+      margin-left: 900px;
+      top: 200px;
+      background: #CDC8C8;
+      border-radius: 30px;
+    }
+
+    .searchdate{
+      position: absolute;
+      width: 250px;
+      height: 60px;
+      margin-left: 900px;
+      top: 200px;
+      background: #CDC8C8;
+      border-radius: 30px;
+    }
+    .btn{
+      position: absolute;
+      width: 180px;
+      height: 50px;
+      left: 950px;
+      top: 300px;
+      font-size: 26px;
+      /* Green 1 */
+      background: #219653;
+      border-radius: 30px;
+        }
+
+
+        .btnpayment{
+          position: absolute;
+          width: 180px;
+          height: 50px;
+          left: 200px;
+          top: 300px;
+          font-size: 26px;
+          /* Green 1 */
+          background: #219653;
+          border-radius: 30px;
+            }
+
+        
+
+
+  
+  
+ 

@@ -1,0 +1,60 @@
+.row2{
+position: absolute;
+width: 500px;
+height: 400px;
+left: 143px;
+top: 202px;
+background:  rgba(19, 18, 18, 0.63);
+}
+
+#payOptions{
+    margin-top: 20px;
+}
+
+#div1{
+    margin-top: 20px;
+}
+
+#div2{
+    width: 146.41px;
+    height: 114px;
+    margin-top: 90px;
+    margin-left: 170px;
+    
+    background: url(../Images/QRCode.png);
+}
+
+
+#payNow{
+    width: 150px;
+    height: 40px;
+    color: honeydew;
+    background-color:green;
+}
+
+.row1{
+    position: absolute;
+    width: 487px;
+    height: 400px;
+    left: 740px;
+    top: 202px;
+    background:  rgba(19, 18, 18, 0.63);
+    }
+
+select {
+    text-align-last: center;
+        width: 180px;
+    font-size: 18px;
+}
+
+.table1{
+    border-spacing: 10px;
+    width: 400px;
+    border-collapse: separate;
+    border: 1px solid black;
+    margin: 1%;
+    margin-left: 55px;
+    color:rgba(20, 172, 12, 0.93);
+    background-color:rgba(73, 101, 87, 0.54)
+}
+

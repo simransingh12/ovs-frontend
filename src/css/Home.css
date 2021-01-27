@@ -1,0 +1,66 @@
+* {
+  text-align: center;
+}
+.logo {
+  position: absolute;
+  width: 150px;
+  height: 140px;
+  left: 20px;
+  top: 15px;
+  /* background: #0F1210; */
+  background-image: url(../Images/veglogo.png);
+  background-size: 150px;
+}
+
+.header {
+  position: absolute;
+  width: 1366px;
+  height: 160px;
+  left: 0px;
+  top: 0px;
+
+  background: rgba(19, 18, 18, 0.63);
+}
+
+
+
+.smartVegMarket {
+  position: absolute;
+  width: 310px;
+  height: 30px;
+  left: 156px;
+  top: 85px;
+
+  font-family: Corben;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 52px;
+  /* identical to box height */
+  /* background: rgba(50, 43, 43, 0.63); */
+
+  color: #ffffff;
+}
+
+.smartVeg {
+  position: absolute;
+  width: 458px;
+  height: 133px;
+  left: 80px;
+  top: 5px;
+
+  font-family: 'Courier New', Courier, monospace;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 133px;
+  /* background: rgba(50, 43, 43, 0.63); */
+  color: #faf4f4;
+}
+.body {
+  position: relative;
+  width: 1366px;
+  height: 625px;
+  opacity:0.90 ;
+  background: url(../Images/veg.png);
+}
